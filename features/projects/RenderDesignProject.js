@@ -1,11 +1,11 @@
 import { Text, View } from 'react-native';
 import { Card } from 'react-native-elements';
 
-const RenderProject = ({ project }) => {
-    if (project) {
+const RenderDesignProject = ({ designProject }) => {
+    if (designProject) {
         return (
             <Card containerStyle={{ padding: 0 }}>
-                <Card.Image source={project.image}>
+                <Card.Image source={designProject.image}>
                     <View style={{ justifyContent: 'center', flex: 1 }}>
                         <Text
                             style={{
@@ -14,15 +14,15 @@ const RenderProject = ({ project }) => {
                                 fontSize: 20
                             }}
                         >
-                            {project.name}
+                            {designProject.name}
                         </Text>
                     </View>
                 </Card.Image>
-                <Text style={{ margin: 20 }}>{project.description}</Text>
+                <Text style={{ margin: 20 }}>{designProject.description}</Text>
             </Card>
         );
     }
     return <View />;
 };
 
-export default RenderProject;
+export default RenderDesignProject;

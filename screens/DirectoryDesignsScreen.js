@@ -1,23 +1,23 @@
 import { useState } from 'react';
 import { FlatList } from 'react-native';
 import { Avatar, ListItem } from 'react-native-elements';
-import { PROJECTS } from '../shared/projects';
+import { DESIGNPROJECTS } from '../shared/designProjects';
 
-const DirectoryScreen = ({ navigation }) => {
-    const [projects, setProjects] = useState(PROJECTS);
+const DirectoryDesignScreen = ({ navigation }) => {
+    const [designProjects, setDesignProjects] = useState(DESIGNPROJECTS);
 
-    const renderDirectoryItem = ({ item: project }) => {
+    const renderDirectoryItem = ({ item: designProject }) => {
         return (
             <ListItem
                 onPress={() =>
-                    navigation.navigate('ProjectInfo', { project })
+                    navigation.navigate('DesignInfo', { designProject })
                 }
             >
-                <Avatar source={project.image} rounded />
+                <Avatar source={designProject.icon} />
                 <ListItem.Content>
-                    <ListItem.Title>{project.name}</ListItem.Title>
+                    <ListItem.Title>{designProject.name}</ListItem.Title>
                     <ListItem.Subtitle>
-                        {project.description}
+                        {designProject.description}
                     </ListItem.Subtitle>
                 </ListItem.Content>
             </ListItem>
@@ -25,11 +25,11 @@ const DirectoryScreen = ({ navigation }) => {
     };
     return (
         <FlatList
-            data={projects}
+            data={designProjects}
             renderItem={renderDirectoryItem}
             keyExtractor={(item) => item.id.toString()}
         />
     );
 };
 
-export default DirectoryScreen;
+export default DirectoryDesignScreen;
