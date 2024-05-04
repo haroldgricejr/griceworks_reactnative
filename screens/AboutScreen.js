@@ -1,6 +1,5 @@
 import { ScrollView, Text } from 'react-native';
 import { Avatar, Card, ListItem } from 'react-native-elements';
-import { Image } from 'react-native-elements';
 
 const AboutScreen = () => {
     

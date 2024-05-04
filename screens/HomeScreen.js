@@ -40,7 +40,6 @@ const HomeScreen = ({ navigation }) => {
     );
 };
 
-
 const styles = StyleSheet.create({
     cardText: {
         textAlign: 'center',
@@ -48,7 +47,5 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
 })
-
-
 
 export default HomeScreen;

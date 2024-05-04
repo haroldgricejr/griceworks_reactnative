@@ -13,7 +13,7 @@ const DirectoryDesignScreen = ({ navigation }) => {
                     navigation.navigate('DesignInfo', { designProject })
                 }
             >
-                <Avatar source={designProject.icon} />
+                <Avatar source={designProject.image} rounded/>
                 <ListItem.Content>
                     <ListItem.Title>{designProject.name}</ListItem.Title>
                     <ListItem.Subtitle>
